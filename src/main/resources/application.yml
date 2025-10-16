@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/homeloan
+    url: jdbc:postgresql://localhost:5432/homeloan?currentSchema=homeloan_schema
     username: loanuser
     password: password
     driver-class-name: org.postgresql.Driver
@@ -12,7 +12,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        default_schema: homeloan_schema   # <- add this line
+        default_schema: homeloan_schema   # this ensures Hibernate uses your schema
 
   servlet:
     multipart:
